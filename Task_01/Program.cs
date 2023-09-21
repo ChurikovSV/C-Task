@@ -10,15 +10,23 @@ Console.Write("Enter the second number: ");
 int NumberSecond = Convert.ToInt32(Console.ReadLine());
 
 int max = 0;
+int min = 0;
 
-if (NumberFirst > NumberSecond) max = NumberFirst;
-if (NumberSecond > NumberFirst) max = NumberSecond;
+if (NumberFirst > NumberSecond)
+{
+    max = NumberFirst;
+    min = NumberSecond;
+}
+else
+{
+    max = NumberSecond;
+    min = NumberFirst;
+}
 if (NumberSecond == NumberFirst) 
 {
     Console.WriteLine("Both numbers are equal");
 }
 else 
 {
-    Console.Write("max = ");
-    Console.WriteLine(max);
+    Console.Write($"max = {max}, min = {min}");
 }
