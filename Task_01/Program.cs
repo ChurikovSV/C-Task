@@ -28,5 +28,5 @@ if (NumberSecond == NumberFirst)
 }
 else 
 {
-    Console.Write($"max = {max}, min = {min}");
+    Console.WriteLine($"max = {max}, min = {min}");
 }
