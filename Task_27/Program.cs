@@ -13,7 +13,7 @@ int NumberSum(int num)
 
     while (num > 0)
     {
-        sum = sum + num % 10;
+        sum += num % 10;
         num /= 10;
     }
 
