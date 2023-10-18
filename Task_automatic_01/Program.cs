@@ -14,18 +14,34 @@ using System;
 public class Answer
 {
     static bool IsPalindrome(int number){
-      if (number[0] ==  number[4] || number[1] ==  number[3])
+      // Введите свое решение ниже
+      int  n = number;
+      int reverse = 0;
+      int i = 0;
+       while (number != 0)
+       {
+          int dig = number % 10;
+          reverse = reverse * 10 + dig;
+          number /= 10;
+           i++;
+        }
+      if(i != 5)
       {
+        Console.WriteLine($"Число не пятизначное");
         return false;
       }
-      else {
-        return true;
+      else
+      {
+      
+        if(n == reverse) 
+        {
+          return true;
+        }
+      else{
+          return false;
+        }
       }
-        // if (number!.Length > 4)
-        // {
-        //     IsPalindrome(number);
-        // } 
-        // else Console.WriteLine($"Введи правильное число");
+      
     }
   
   // Не удаляйте и не меняйте метод Main! 
@@ -36,7 +52,7 @@ public class Answer
             number = int.Parse(args[0]);
         } else {
            // Здесь вы можете поменять значения для отправки кода на Выполнение
-            number = 64545;
+            number = 645467;
         }
 
         // Не удаляйте строки ниже
